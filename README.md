@@ -46,16 +46,16 @@ O script `train_model.py` realiza as seguintes etapas principais:
 ## Como Executar o Treinamento
 
 1. **Tenha o ambiente configurado**
-   - É necessário ter Python 3.9+ e todas as dependências listadas em `requirements.txt`.
+   - É necessário ter Python 3.9+ e todas as dependências listadas em `requirements.txt`. Para baixar, rode no terminal `pip install -r requirements.txt`
 
 2. **Verifique o arquivo de dados**
-   - O arquivo `ml_model/data/projetos.csv` deve estar presente e conter as colunas esperadas, incluindo `data_inicio` e `sucesso`.
+   - O arquivo `ml_model/data/projetos.csv` deve estar presente.
 
 3. **Execute o script**
-   - No terminal, navegue até a pasta do projeto e rode:
+   - No terminal, rode:
 
      ```
-     python train_model.py
+     python ml_model/train_model.py
      ```
 
    - O script irá carregar os dados, treinar o modelo, ajustar o threshold, mostrar métricas no terminal e salvar o arquivo `model.pkl` pronto para ser usado na API.
@@ -104,7 +104,7 @@ A API foi projetada para receber informações detalhadas de um projeto, aplicar
    - Garanta que as dependências do `requirements.txt` estejam instaladas.
 
 2. **Execute a API com Uvicorn**
-   - No terminal, navegue até a pasta da API e rode:
+   - No terminal, rode:
      ```
      uvicorn api.main:app --host 0.0.0.0 --port 8000
      ```
@@ -175,7 +175,7 @@ O chatbot está dividido em **três partes principais**:
 
 ## Como Executar Localmente
 
-Para rodar o chatbot **localmente**, é necessário garantir que **a API FastAPI esteja ativa** em paralelo, pois ela faz o cálculo da probabilidade de sucesso.
+Para rodar o chatbot **localmente**, é necessário garantir que **a API FastAPI esteja ativa** em paralelo, pois ela faz o cálculo da probabilidade de sucesso e com o requirements.txt instalado.
 
 ### Passo a Passo
 
@@ -192,8 +192,8 @@ API_BASE_URL=http://localhost:8000
 OPENAI_API_KEY= chave da OpenAI
 
 4. **Rode o chatbot**
-Navegue até a pasta `chatbot/` e execute:
-streamlit run main.py
+No terminal execute:
+streamlit run chatbot/main.py
 
 
 5. **Acesse no navegador**
