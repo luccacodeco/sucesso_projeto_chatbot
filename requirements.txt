@@ -1,0 +1,14 @@
+streamlit
+pandas
+requests
+python-dotenv
+fastapi
+pydantic
+scikit-learn==1.6.1
+numpy
+openai>=1.0.0
+uvicorn
+joblib
+langchain
+langchain-openai
+langchain-community
