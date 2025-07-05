@@ -187,17 +187,18 @@ Para rodar o chatbot **localmente**, é necessário garantir que **a API FastAPI
 2. **Configure o arquivo `.env`**
 Crie um arquivo `.env` dentro da pasta `chatbot/` ou na raiz do projeto com:
 API_BASE_URL=http://localhost:8000
+
 OPENAI_API_KEY= chave de api da OpenAI
 
-3. **Rode o chatbot**
+4. **Rode o chatbot**
 Navegue até a pasta `chatbot/` e execute:
 streamlit run main.py
 
 
-4. **Acesse no navegador**
+5. **Acesse no navegador**
 O Streamlit mostrará o link (geralmente `http://localhost:8501`).
 
-5. **Pronto**
+6. **Pronto**
 O chatbot estará funcional para receber perguntas, gerar previsões de projetos e consultar o histórico de usuários.
 
 ## Observações
