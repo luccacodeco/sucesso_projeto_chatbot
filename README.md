@@ -189,7 +189,7 @@ Para rodar o chatbot **localmente**, é necessário garantir que **a API FastAPI
 Crie um arquivo `.env` dentro da pasta `chatbot/` ou na raiz do projeto com o seguinte conteúdo:
 
 API_BASE_URL=http://localhost:8000
-OPENAI_API_KEY= chave de api da OpenAI
+OPENAI_API_KEY= chave da OpenAI
 
 4. **Rode o chatbot**
 Navegue até a pasta `chatbot/` e execute:
