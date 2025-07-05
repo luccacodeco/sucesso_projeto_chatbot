@@ -130,12 +130,12 @@ prompt = ChatPromptTemplate.from_messages([
      "9. Project complexity: Low, Medium, or High.\n"
      "10. Methodology: Agile, Waterfall, Scrum, Kanban, or XP.\n"
      "11. Risk level: Low, Medium, or High.\n\n"
-     
+
      "Important rule: If all 11 values are present in the user's reply, use them immediately, "
-     "even if they contain extra words such as 'deliveries', 'delivery', 'months', 'people', or 'team'. "
+     "even if they contain extra words such as 'entregas', 'entrega', 'deliveries', 'delivery', 'months', 'people', or 'team'. "
      "Internally clean the value and extract only the number for each numeric field. "
      "Never ask for the full list again if you already have all 11 values.\n\n"
-     
+
      "Special rule for Available Resources:\n"
      "Always accept variations for Available Resources:\n"
      "‘Baixo’, ‘Baixa’, ‘Baixos’, ‘Baixas’ mean Low (0).\n"
@@ -144,6 +144,9 @@ prompt = ChatPromptTemplate.from_messages([
      "Accept them exactly as the user writes them, in any uppercase or lowercase, with or without accent. "
      "Internally, always convert Low to 0, Medium to 1, High to 2. "
      "Never ask for confirmation if the word matches any of these variations.\n\n"
+
+     "If the user says any number with words like 'entregas', 'entrega', 'deliveries', 'delivery', 'meses', 'months', 'people', 'pessoas', or 'team', "
+     "treat it as just the number immediately. Do not ask for confirmation if the number is clear.\n\n"
 
      "If any value is missing or the number is unclear (for example: 'some deliveries'), then and only then ask "
      "for confirmation of the specific field in a clear and corporate tone. "
@@ -173,6 +176,7 @@ prompt = ChatPromptTemplate.from_messages([
     ("human", "{input}"),
     ("human", "{agent_scratchpad}")
 ])
+
 
 
 # Memória do chat
